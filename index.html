@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jeu de devinette de nombre</title>
+    <style>
+      .container {
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      form {
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+      }
+      
+      input[type="number"] {
+        border: none;
+        border-bottom: 2px solid blue;
+        font-size: 16px;
+        padding: 10px;
+        width: 80%;
+      }
+      
+      button[type="submit"] {
+        background-color: blue;
+        border: none;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+      
+      @media (max-width: 800px) {
+        form {
+          width: 80%;
+        }
+        
+        .container {
+          margin: auto;
+        }
+      }
+      
+      @media (min-width: 800px) {
+        .welcome-message {
+          display: none;
+        }
+      }
+      
+      @media (max-width: 800px) {
+        .welcome-message {
+          display: block;
+          font-size: 20px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="welcome-message">Bienvenue dans notre jeu de devinette de nombre !</div>
+      <h1>Jeu de devinette de nombre</h1>
+      <p>Devinez le nombre compris entre 1 et 100 :</p>
+      <form method="POST">
+        <input type="number" name="userResponse" min="1" max="100" required>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </body>
+</html>
